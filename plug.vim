@@ -263,7 +263,7 @@ function! plug#end()
   let lod = { 'ft': {}, 'map': {}, 'cmd': {} }
 
   if exists('g:did_load_filetypes')
-    filetype off
+    " filetype off
   endif
   for name in g:plugs_order
     if !has_key(g:plugs, name)
@@ -332,7 +332,7 @@ function! plug#end()
   endfor
 
   call s:reorg_rtp()
-  filetype plugin indent on
+  " filetype plugin indent on
   if has('vim_starting')
     if has('syntax') && !exists('g:syntax_on')
       syntax enable
